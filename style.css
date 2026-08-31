@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0d0d0d;
+    color: #f5f5f5;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 28px 5%;
+
+    z-index: 100;
+
+    mix-blend-mode: difference;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 0 5% 8%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.9),
+            rgba(0,0,0,.15)
+        ),
+        url("https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2000")
+        center / cover;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 7px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 90px);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -3px;
+}
+
+.hero-link {
+    display: inline-block;
+    margin-top: 50px;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 160px 5%;
+}
+
+.section-number {
+    font-size: 10px;
+    letter-spacing: 4px;
+    opacity: .55;
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    font-size: clamp(45px, 7vw, 100px);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -4px;
+}
+
+
+/* PROJECTS */
+
+.projects {
+    margin-top: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 30px;
+}
+
+.project:nth-child(2) {
+    margin-top: 150px;
+}
+
+.project-image {
+    height: 600px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #222,
+            #090909
+        );
+}
+
+.project p {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    opacity: .6;
+}
+
+.project h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+
+/* SERVICES */
+
+.services {
+    background: #f5f5f5;
+    color: #111;
+}
+
+.service-list {
+    margin-top: 100px;
+}
+
+.service-list > div {
+    border-top: 1px solid #aaa;
+
+    padding: 35px 0;
+
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    align-items: start;
+}
+
+.service-list span {
+    font-size: 11px;
+    opacity: .5;
+}
+
+.service-list h3 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.service-list p {
+    max-width: 350px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ABOUT */
+
+.about {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about h2 {
+    max-width: 1000px;
+}
+
+.about-text {
+    max-width: 500px;
+
+    margin-top: 70px;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* CONTACT */
+
+.contact {
+    min-height: 80vh;
+
+    padding: 150px 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #f5f5f5;
+    color: #111;
+}
+
+.contact h2 {
+    font-size: clamp(50px, 9vw, 140px);
+    font-weight: 400;
+    line-height: .85;
+    letter-spacing: -5px;
+}
+
+.contact a {
+    margin-top: 60px;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #111;
+    padding-bottom: 10px;
+
+    width: fit-content;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px 5%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: .5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .project-image {
+        height: 450px;
+    }
+
+    .service-list > div {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+    .service-list p {
+        grid-column: 2;
+    }
+
+}
