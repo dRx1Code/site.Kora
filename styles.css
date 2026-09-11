@@ -187,10 +187,10 @@
   /* ---------- work ---------- */
   .work{ border-top:1px solid var(--line); }
   .work-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); }
-  .work-item{
-    background:var(--black); aspect-ratio:4/5; position:relative; overflow:hidden;
+.work-item{
+    background:var(--black); position:relative; overflow:hidden;
     display:flex; align-items:flex-end; padding:26px; cursor:pointer;
-  }
+}
   .work-item .bg{
     position:absolute; inset:0;
     background:linear-gradient(160deg, var(--panel) 0%, var(--black) 70%);
@@ -299,3 +299,15 @@
     *{ animation:none !important; transition:none !important; }
     html{ scroll-behavior:auto; }
   }
+
+
+  .work-item .bg{
+    position:absolute; inset:0;
+    background:linear-gradient(160deg, var(--panel) 0%, var(--black) 70%);
+    transition:transform .7s var(--ease);
+}
+video.bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
